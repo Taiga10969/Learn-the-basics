@@ -11,12 +11,6 @@ GitHubで公開されているコードを動かした記録<br>
 として，ライブラリが用意されているため，Cloneする必要もなく，簡単に実装可能．<br>
 
 以下のdocker imagesから動作可能．<br>
-https://hub.docker.com/r/taiga10969/clip
+docker：https://hub.docker.com/r/taiga10969/clip
 
-
-
-
-
-
-
-https://github.com/openai/CLIP
+参考：https://github.com/openai/CLIP
