@@ -15,6 +15,7 @@ print('input : ', input)
 with torch.no_grad():
     outputs = model(input_ids = input['input_ids'], labels = input['input_ids'])
 
+#print('output : ', outputs)
 print('loss : ', outputs.loss)
 print('outputs[logits].shape : ', outputs['logits'].shape)
 
@@ -33,7 +34,7 @@ print('output_string : ', string)
 text = "My name is Taiga ,"
 input = tokenizer(text, return_tensors='pt')
 print('input : ', input)
-output = model.generate(inputs=input['input_ids'], max_length=32, min_length=5, pad_token_id=50256, eos_token_id=50256)
+output = model.generate(inputs=input['input_ids'], max_length=32, min_length=5, pad_token_id=50256, eos_token_id=50256, early_stopping=True)
 string = tokenizer.decode(output[0])
 print(string)
 
@@ -46,9 +47,12 @@ print(string)
 #output_text = model.generate(text, max_length=100, early_stopping=True)
 #print('output text : ', output_text)
 
+## 参考
+# https://gotutiyan.hatenablog.com/entry/2022/02/23/133414
+# https://www.youtube.com/watch?v=elUCn_TFdQc
 
-
-''' 実行結果
+'''
+実行結果
 tokenizer.vocab_size :  50257
 input :  {'input_ids': tensor([[ 3666,  1438,   318, 11940, 13827,   837,   314,   588,  9283]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1]])}
 loss :  tensor(5.1306)
@@ -61,6 +65,3 @@ input :  {'input_ids': tensor([[ 3666,  1438,   318, 11940, 13827,   837]]), 'at
 My name is Taiga, and I'm a student at the University of Tokyo. I'm a student of the Japanese language, and I'm a student of
 '''
 
-## 参考
-# https://gotutiyan.hatenablog.com/entry/2022/02/23/133414
-# https://www.youtube.com/watch?v=elUCn_TFdQc
