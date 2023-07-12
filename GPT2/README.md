@@ -52,5 +52,5 @@ print(string)
 ```
 
 ### 参考
-https://gotutiyan.hatenablog.com/entry/2022/02/23/133414
+https://gotutiyan.hatenablog.com/entry/2022/02/23/133414<br>
 https://www.youtube.com/watch?v=elUCn_TFdQc
