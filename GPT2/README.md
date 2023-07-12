@@ -39,3 +39,18 @@ with torch.no_grad():
 print('loss : ', outputs.loss)
 print('outputs[logits].shape : ', outputs['logits'].shape)
 ```
+
+### generate
+generatedでは，ある単語列を入力した場合，Autoregressiveにその後の単語列を予測するというもの．
+```
+text = "My name is Taiga ,"
+input = tokenizer(text, return_tensors='pt')
+print('input : ', input)
+output = model.generate(inputs=input['input_ids'], max_length=32, min_length=5, pad_token_id=50256, eos_token_id=50256, early_stopping=True)
+string = tokenizer.decode(output[0])
+print(string)
+```
+
+### 参考
+https://gotutiyan.hatenablog.com/entry/2022/02/23/133414
+https://www.youtube.com/watch?v=elUCn_TFdQc
