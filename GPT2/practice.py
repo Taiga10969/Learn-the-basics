@@ -46,6 +46,21 @@ print(string)
 #output_text = model.generate(text, max_length=100, early_stopping=True)
 #print('output text : ', output_text)
 
+
+
+''' 実行結果
+tokenizer.vocab_size :  50257
+input :  {'input_ids': tensor([[ 3666,  1438,   318, 11940, 13827,   837,   314,   588,  9283]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1]])}
+loss :  tensor(5.1306)
+outputs[logits].shape :  torch.Size([1, 9, 50257])
+output_ids :  [ 198  318 1757   12   13  290  716  284   13]
+tokens :  ['Ċ', 'Ġis', 'ĠJohn', '-', '.', 'Ġand', 'Ġam', 'Ġto', '.']
+output_string :  
+ is John-. and am to.
+input :  {'input_ids': tensor([[ 3666,  1438,   318, 11940, 13827,   837]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1]])}
+My name is Taiga, and I'm a student at the University of Tokyo. I'm a student of the Japanese language, and I'm a student of
+'''
+
 ## 参考
 # https://gotutiyan.hatenablog.com/entry/2022/02/23/133414
 # https://www.youtube.com/watch?v=elUCn_TFdQc
