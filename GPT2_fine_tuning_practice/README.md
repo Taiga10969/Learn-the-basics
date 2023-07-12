@@ -1,0 +1,3 @@
+# GPT2_fine_tuning_practice
+huggingfaceで公開されているGPT2を用いてモデルのファインチューニングをさせる．
+今回は，transformers ライブラリを用いたファインチューニング方法を学ぶ．（練習）
