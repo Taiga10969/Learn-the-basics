@@ -1,4 +1,4 @@
-# Learn-the-basics/Hugging_Face-transformers/CLIP
+# Hugging_Face-transformers/CLIP
 自然言語教師から転送可能な視覚モデルの学習<br>
 GitHubで公開されているコードを動かした記録<br>
 ```$ pip install git+https://github.com/openai/CLIP.git```<br>
