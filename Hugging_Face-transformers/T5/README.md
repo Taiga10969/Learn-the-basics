@@ -10,5 +10,6 @@ pip install SentencePiece
 
 
 【参考】<br>
+[T5 paper]https://arxiv.org/abs/1910.10683
 https://huggingface.co/docs/transformers/model_doc/t5<br>
 https://llcc.hatenablog.com/entry/2023/05/20/225822
