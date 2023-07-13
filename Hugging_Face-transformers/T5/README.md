@@ -30,7 +30,7 @@ T5Tokenizer requires the SentencePiece library but it was not found in your envi
 installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
 that match your environment. Please note that you may need to restart your runtime after installation.
 ```
-以上の環境のDocker iamge : <br>
+以上の環境のDocker iamge : https://hub.docker.com/r/taiga10969/t5<br>
 
 
 ## ●basic.py
