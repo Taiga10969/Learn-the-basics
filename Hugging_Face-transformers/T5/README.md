@@ -62,7 +62,7 @@ output = model.generate(input_ids=input_ids, max_new_tokens=128)
 output_text = tokenizer.decode(output[0])
 print("output_text : ", output_text)
 ```
-
+※non-autoregressive に推論させる方法は，```basic.py``` の後半部分に記載があります．
 
 
 ## 【参考】<br>
