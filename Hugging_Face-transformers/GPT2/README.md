@@ -1,4 +1,4 @@
-# Learn-the-basics/Hugging_Face-transformers/GPT2
+# Hugging_Face-transformers/GPT2
 GPT2について色々...<br>
 <br>
 `model` : non-autregressiveに次の単語を予測する<br>
