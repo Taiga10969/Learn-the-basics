@@ -7,7 +7,7 @@ GPT2について色々...<br>
 ※`model.generate` ではモデルの学習は行えない．と解釈<br>
 
 
-## practice.py
+## basic.py
 モデルの動作確認コード
 ### 必要ライブラリのインポート
 ```
