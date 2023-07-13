@@ -10,8 +10,7 @@ Text-to-Text Transfer Transformer は分類，翻訳，要約といった様々�
 Encoder-Decoder, Language model, Prefix LM の比較<br>
 ※show the paper 3.2
 
-## ●
-必要ライブラリ
+## ●必要ライブラリ
 ```
 pip install transformers
 pip install SentencePiece
