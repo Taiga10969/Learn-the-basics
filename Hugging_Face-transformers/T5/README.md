@@ -1,7 +1,7 @@
 # Hugging_Face-transformers/T5
 T5 (Text-to-Text Transfer Transformer) について色々
 
-## T5 : Text-To-Text Transfer Transformer
+## ●T5 : Text-To-Text Transfer Transformer
 Text-to-Text Transfer Transformer は分類，翻訳，要約といった様々な自然言語処理タスクを “Text-to-Text” で解くモデル．<br>
 “Text-to-Text” とは入力を"タスク：問題"，出力を"回答"の形式として，全てのタスクを同じモデルで解いてしまおう！というもの．<br>
 学習データだけ変えれば，同じモデルで様々なタスクを解くことができるという魅力がある．
@@ -10,7 +10,8 @@ Text-to-Text Transfer Transformer は分類，翻訳，要約といった様々�
 Encoder-Decoder, Language model, Prefix LM の比較<br>
 ※show the paper 3.2
 
-## 必要ライブラリ
+## ●
+必要ライブラリ
 ```
 pip install transformers
 pip install SentencePiece
@@ -33,7 +34,7 @@ that match your environment. Please note that you may need to restart your runti
 以上の環境のDocker iamge : <br>
 
 
-## basic.py
+## ●basic.py
 T5の動作確認を行う．<br>
 今回は，T5の論文のアブストラクトを入力し，```task_prefix = 'summarize: '``` として，アブストラクトを要約するタスクを行う．<br>
 ### tokenizer と model の定義
