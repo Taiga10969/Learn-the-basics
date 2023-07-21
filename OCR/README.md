@@ -7,7 +7,7 @@ OCRは，Optical Character Reader（またはRecognition）の略であり，画
 
 ## pytesseract を用いたOCR
 ・ ```pytesseract``` : GoogleのTesseract OCRエンジンをPythonプログラムから簡単に利用できるようにしたラッパーライブラリ<br>
-・ jpeg、png、gif、bmp、tiff など、PillowおよびLeptonicaの画像ライブラリでサポートされているすべての画像タイプを読み取ることが可能
+・ jpeg、png、gif、bmp、tiff など，PillowおよびLeptonicaの画像ライブラリでサポートされているすべての画像タイプを読み取ることが可能
 
 
 
