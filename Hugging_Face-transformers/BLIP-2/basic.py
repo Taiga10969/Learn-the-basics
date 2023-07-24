@@ -1,9 +1,10 @@
-from transformers import AutoProcessor, Blip2ForConditionalGeneration
+from transformers import AutoProcessor, Blip2ForConditionalGeneration, AutoTokenizer
 import torch
 from PIL import Image
 
 # モデルの定義
 processor = AutoProcessor.from_pretrained("Salesforce/blip2-opt-2.7b")
+tokenizer = AutoTokenizer.from_pretrained("Salesforce/blip2-opt-2.7b")
 model = Blip2ForConditionalGeneration.from_pretrained("Salesforce/blip2-opt-2.7b", torch_dtype=torch.float16)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -46,9 +47,9 @@ generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)
 print("figure2 : ", generated_text)
 
 
-## 学習に使えるような使用方法
-prompt = "Question: What type of diagram is this? Answer:"
-inputs = processor(images=image1, text=prompt, return_tensors="pt").to(device, torch.float16)
+##
+prompt = "Question: What type of diagram is this? Answer: "
+inputs = processor(images=image2, text=prompt, return_tensors="pt").to(device, torch.float16)
 print(inputs)
 
 inputs = {k: v.to(device) for k, v in inputs.items()}
@@ -60,8 +61,19 @@ label = label.to(device)
 
 outputs = model(pixel_values=inputs["pixel_values"], input_ids=inputs["input_ids"], labels=label)
 
-print(outputs)
-#output = model(**inputs)
-attributes = dir(outputs)
-print(attributes)
+ids = outputs['logits'].argmax(dim=2).cpu().numpy()
+print('output_ids : ', ids[0])
+
+generated_text = processor.batch_decode(ids, skip_special_tokens=True)[0].strip()
+
+print("figure1 : ", generated_text)
+
+
+tokens = tokenizer.convert_ids_to_tokens(ids[0])
+print("tokens : ", tokens)
+
+string = tokenizer.convert_tokens_to_string(tokens)
+print('output_string : ', string)
+
+
 
