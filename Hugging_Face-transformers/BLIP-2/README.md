@@ -49,6 +49,7 @@ print(attributes)
 
 
 ## 参考
+[paper] https://arxiv.org/abs/2301.12597
 [github] https://github.com/huggingface/blog/blob/main/blip-2.md <br>
 [Hugging Face] https://huggingface.co/docs/transformers/main/model_doc/blip-2 <br>
 
