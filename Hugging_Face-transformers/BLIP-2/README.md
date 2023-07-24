@@ -25,7 +25,7 @@ generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)
 print("img : ", generated_text)
 ```
 
-# 推論2
+## 推論2
 Non-Autoregressiveに推論させる．
 ```
 prompt = "Question: What type of diagram is this? Answer:"
