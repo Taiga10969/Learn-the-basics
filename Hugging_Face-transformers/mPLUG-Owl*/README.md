@@ -21,3 +21,8 @@ pip install -r requirements.txt
 ```
 
 
+エラー解消のために…
+```
+pip install protobuf==3.20.1
+```
+
