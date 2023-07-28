@@ -11,6 +11,9 @@ github : https://github.com/X-PLUG/mPLUG-Owl
 * torchvision==0.14.1
 * torchaudio==0.13.1
 ```
+apt-get install python3-dev
+```
+```
 pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
 ```
 ```
