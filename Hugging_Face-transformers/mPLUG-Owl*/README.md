@@ -5,7 +5,12 @@ github : https://github.com/X-PLUG/mPLUG-Owl
 ※ transformersの中に直接収録されているモデルではないが，transofrmersのコード記述方式で実装可能．
 
 ## 環境構築　（まあまあ苦労した...）
-#### Docker image
+
+#### Docker image (Python3.10のみ，cuda12.10，ubuntu22.04)
+taiga10969/basic_image:cuda12.1.0-ubuntu22.04-python3.10<br>
+https://hub.docker.com/r/taiga10969/basic_image/tags<br>
+
+#### Docker image　（mPLUG-Owl動作用，cuda12.10，ubuntu22.04）
 taiga10969/mplug-owl:cuda12.10ubuntu22.04<br>
 https://hub.docker.com/r/taiga10969/mplug-owl<br>
 
