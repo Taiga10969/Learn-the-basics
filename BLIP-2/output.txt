@@ -1,0 +1,129 @@
+Use 3 GPUs
+Loading checkpoint shards: 100%|██████████████████████████████████| 5/5 [00:04<00:00,  1.20it/s]
+==========================================================================================
+Layer (type:depth-idx)                                            Param #
+==========================================================================================
+Blip2T5                                                           24,576
+├─VisionTransformer: 1-1                                          363,264
+│    └─PatchEmbed: 2-1                                            --
+│    │    └─Conv2d: 3-1                                           (829,312)
+│    └─Dropout: 2-2                                               --
+│    └─ModuleList: 2-3                                            --
+│    │    └─Block: 3-2                                            (25,248,768)
+│    │    └─Block: 3-3                                            (25,248,768)
+│    │    └─Block: 3-4                                            (25,248,768)
+│    │    └─Block: 3-5                                            (25,248,768)
+│    │    └─Block: 3-6                                            (25,248,768)
+│    │    └─Block: 3-7                                            (25,248,768)
+│    │    └─Block: 3-8                                            (25,248,768)
+│    │    └─Block: 3-9                                            (25,248,768)
+│    │    └─Block: 3-10                                           (25,248,768)
+│    │    └─Block: 3-11                                           (25,248,768)
+│    │    └─Block: 3-12                                           (25,248,768)
+│    │    └─Block: 3-13                                           (25,248,768)
+│    │    └─Block: 3-14                                           (25,248,768)
+│    │    └─Block: 3-15                                           (25,248,768)
+│    │    └─Block: 3-16                                           (25,248,768)
+│    │    └─Block: 3-17                                           (25,248,768)
+│    │    └─Block: 3-18                                           (25,248,768)
+│    │    └─Block: 3-19                                           (25,248,768)
+│    │    └─Block: 3-20                                           (25,248,768)
+│    │    └─Block: 3-21                                           (25,248,768)
+│    │    └─Block: 3-22                                           (25,248,768)
+│    │    └─Block: 3-23                                           (25,248,768)
+│    │    └─Block: 3-24                                           (25,248,768)
+│    │    └─Block: 3-25                                           (25,248,768)
+│    │    └─Block: 3-26                                           (25,248,768)
+│    │    └─Block: 3-27                                           (25,248,768)
+│    │    └─Block: 3-28                                           (25,248,768)
+│    │    └─Block: 3-29                                           (25,248,768)
+│    │    └─Block: 3-30                                           (25,248,768)
+│    │    └─Block: 3-31                                           (25,248,768)
+│    │    └─Block: 3-32                                           (25,248,768)
+│    │    └─Block: 3-33                                           (25,248,768)
+│    │    └─Block: 3-34                                           (25,248,768)
+│    │    └─Block: 3-35                                           (25,248,768)
+│    │    └─Block: 3-36                                           (25,248,768)
+│    │    └─Block: 3-37                                           (25,248,768)
+│    │    └─Block: 3-38                                           (25,248,768)
+│    │    └─Block: 3-39                                           (25,248,768)
+│    │    └─Block: 3-40                                           (25,248,768)
+├─LayerNorm: 1-2                                                  2,816
+├─BertLMHeadModel: 1-3                                            --
+│    └─BertModel: 2-4                                             --
+│    │    └─BertEmbeddings: 3-41                                  1,536
+│    │    └─BertEncoder: 3-42                                     105,136,128
+├─T5ForConditionalGeneration: 1-4                                 --
+│    └─Embedding: 2-5                                             (131,596,288)
+│    └─T5Stack: 2-6                                               131,596,288
+│    │    └─Embedding: 3-43                                       (recursive)
+│    │    └─ModuleList: 3-44                                      (4,630,710,272)
+│    │    └─T5LayerNorm: 3-45                                     (4,096)
+│    │    └─Dropout: 3-46                                         --
+│    └─T5Stack: 2-7                                               131,596,288
+│    │    └─Embedding: 3-47                                       (recursive)
+│    │    └─ModuleList: 3-48                                      (6,241,421,312)
+│    │    └─T5LayerNorm: 3-49                                     (4,096)
+│    │    └─Dropout: 3-50                                         --
+│    └─Linear: 2-8                                                (131,596,288)
+├─Linear: 1-5                                                     3,149,824
+==========================================================================================
+Total params: 12,492,734,336
+Trainable params: 108,314,880
+Non-trainable params: 12,384,419,456
+==========================================================================================
+['PRETRAINED_MODEL_CONFIG_DICT', 'Qformer', 'T_destination', '__annotations__', '__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_apply', '_apply_lemmatizer', '_backward_hooks', '_backward_pre_hooks', '_buffers', '_call_impl', '_forward_hooks', '_forward_hooks_with_kwargs', '_forward_pre_hooks', '_forward_pre_hooks_with_kwargs', '_get_backward_hooks', '_get_backward_pre_hooks', '_get_name', '_is_full_backward_hook', '_lemmatize', '_lemmatizer', '_load_from_state_dict', '_load_state_dict_post_hooks', '_load_state_dict_pre_hooks', '_maybe_warn_non_full_backward_hook', '_modules', '_named_members', '_non_persistent_buffers_set', '_parameters', '_register_load_state_dict_pre_hook', '_register_state_dict_hook', '_replicate_for_data_parallel', '_save_to_state_dict', '_slow_forward', '_state_dict_hooks', '_state_dict_pre_hooks', '_version', 'add_module', 'apply', 'before_evaluation', 'bfloat16', 'buffers', 'call_super_init', 'children', 'cpu', 'cuda', 'default_config_path', 'device', 'double', 'dump_patches', 'eval', 'extra_repr', 'float', 'forward', 'from_config', 'from_pretrained', 'generate', 'get_buffer', 'get_extra_state', 'get_parameter', 'get_submodule', 'half', 'init_Qformer', 'init_tokenizer', 'init_vision_encoder', 'ipu', 'lemmatizer', 'ln_vision', 'load_checkpoint', 'load_checkpoint_from_config', 'load_from_pretrained', 'load_state_dict', 'max_txt_len', 'maybe_autocast', 'modules', 'named_buffers', 'named_children', 'named_modules', 'named_parameters', 'parameters', 'predict_answers', 'prompt', 'query_tokens', 'register_backward_hook', 'register_buffer', 'register_forward_hook', 'register_forward_pre_hook', 'register_full_backward_hook', 'register_full_backward_pre_hook', 'register_load_state_dict_post_hook', 'register_module', 'register_parameter', 'register_state_dict_pre_hook', 'requires_grad_', 'set_extra_state', 'share_memory', 'show_n_params', 'state_dict', 't5_model', 't5_proj', 't5_tokenizer', 'to', 'to_empty', 'tokenizer', 'train', 'training', 'type', 'visual_encoder', 'xpu', 'zero_grad']
+<lavis.processors.blip_processors.BlipImageEvalProcessor object at 0x7fbd98985810>
+=====image1=====
+vis_processors output :  tensor([[[[ 0.5289,  0.5581,  0.5727,  ..., -0.2886, -0.2886, -0.3032],
+          [ 0.5581,  0.5435,  0.5581,  ..., -0.2594, -0.3324, -0.3470],
+          [ 0.5727,  0.5873,  0.5581,  ..., -0.2594, -0.3470, -0.3470],
+          ...,
+          [-0.5660, -0.5660, -0.5660,  ..., -0.7412, -0.7266, -0.7704],
+          [-0.5660, -0.5806, -0.6390,  ..., -0.8288, -0.7850, -0.8142],
+          [-0.6390, -0.5806, -0.6098,  ..., -0.8872, -0.8872, -0.9018]],
+
+         [[ 0.6792,  0.7092,  0.7242,  ...,  0.3040,  0.2890,  0.2890],
+          [ 0.6942,  0.6942,  0.7092,  ...,  0.3340,  0.2589,  0.2740],
+          [ 0.7242,  0.7392,  0.7092,  ...,  0.3340,  0.2589,  0.2740],
+          ...,
+          [-0.7316, -0.7466, -0.7316,  ..., -0.5665, -0.5365, -0.5665],
+          [-0.7616, -0.7616, -0.7766,  ..., -0.6715, -0.6115, -0.6265],
+          [-0.7916, -0.7016, -0.5815,  ..., -0.7316, -0.7316, -0.7316]],
+
+         [[ 1.0794,  1.1078,  1.1221,  ...,  1.2643,  1.2074,  1.2074],
+          [ 1.0936,  1.1078,  1.0936,  ...,  1.2785,  1.2358,  1.2074],
+          [ 1.0794,  1.0936,  1.0652,  ...,  1.2500,  1.2500,  1.2358],
+          ...,
+          [-0.6270, -0.6412, -0.6555,  ..., -0.1293, -0.1151, -0.1151],
+          [-0.6981, -0.6981, -0.6981,  ..., -0.2004, -0.1862, -0.2004],
+          [-0.6981, -0.5701, -0.3568,  ..., -0.2431, -0.2573, -0.2289]]]],
+       device='cuda:0')
+vis_processors output.shape :  torch.Size([1, 3, 224, 224])
+prompt : - 
+output :  ['the merlion statue in singapore']
+prompt :  Question: which city is this? Answer:
+output :  ['singapore']
+promot :  Question: which city is this? Answer: singapore. Question: why? Answer: it has a statue of a merlion. Question: where is the name merlion coming from? Answer:
+output :  ['merlion is a portmanteau of mermaid and lion']
+=====image2=====
+prompt : - 
+output :  ['blp2 vs blp3 vs blp4 vs blp5 ']
+prompt :  Question: what type of figure in this image? Answer:
+output :  ['graph']
+prompt :  Please create a caption for this figure
+output :  ['blp2 vs blp3 vs blp4 vs blp5 ']
+=====image3=====
+prompt : - 
+output :  ['a diagram of an image processing system']
+prompt :  Question: what type of figure in this image? Answer:
+output :  ['diagram']
+prompt :  Please create a caption for this figure
+output :  ['a diagram of the uws architecture']
+=====image4=====
+prompt : - 
+output :  ['a graph showing the number of different types of graphs']
+prompt :  Question: what type of figure in this image? Answer:
+output :  ['line graph']
+prompt :  Are subfigures included in this image? Answer:
+output :  ['no']
